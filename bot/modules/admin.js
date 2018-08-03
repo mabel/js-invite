@@ -1,5 +1,5 @@
 const shortid = require('shortid')
-const checkAdmin = require('./admin/_check-admin.js')
+const checkAdmin = require('./util/check-admin.js')
 
 const cmds = [
     'token_add',
