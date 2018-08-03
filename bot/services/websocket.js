@@ -7,6 +7,7 @@ const validChat = (key)=>{
 }
 
 const broadcast = (msg)=>{
+    console.log(msg)
     if(msg == 'ping') return
     for(const key in members){
         const chat = validChat(key)

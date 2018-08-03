@@ -11,6 +11,7 @@ module.exports = (redisc, wsc)=>{
             const obj = urlParser.parse(req.url, true).query
             const key = obj.path = arr[1]
             obj.raw = req
+            obj.method = req.method
             const params = ['x-real-ip', 'user-agent', 'cookie', 'accept', 'referer']
             params.forEach((el)=>{
                 if(!req.headers[el]) return
