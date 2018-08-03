@@ -1,4 +1,4 @@
-const {admins} = require('../../etc/credentials.js')
+const {admins} = require('../../../etc/credentials.js')
 
 module.exports = (ctx)=>{
     const adminId = (ctx.from && ctx.from.id) || ctx.update.message.from.id

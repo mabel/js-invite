@@ -8,7 +8,7 @@ module.exports = (req, res, redisc, wsc)=>{
         const fn = files.screen.path
         const vim_screen = fs.readFileSync(fn, 'utf-8')
         wsc.send(JSON.stringify({vim_screen}))
-        fs.unlink(fn) 
+        fs.unlinkSync(fn) 
     })
     res.end('ok')
 }
