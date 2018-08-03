@@ -3,6 +3,8 @@ const checkAdmin = require('./util/check-admin.js')
 
 const cmds = [
     'token_add',
+    'token_rem',
+    'tokens_valid',
 ]
 
 module.exports = (bot, redisc, tg)=>{
