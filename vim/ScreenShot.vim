@@ -1137,7 +1137,7 @@ function! ScreenShot()
     let fnhtml = fn.'.html'
     let fnpng = fn.'.png'
     call writefile(a,fnhtml)
-    let cmd = '!curl --user teacher:IWant2Upload -s -v --form screen=@'.fn.'.html https://js-invite.ru/json/upload-screen > /dev/null'
+    let cmd = '!curl --user teacher:IWant2Upload -s -v --form screen=@'.fn.'.html https://js-invite.ru/json/admin-upload-screen > /dev/null'
     "let cmd = '!phantomjs ~/.3f-lab/_util/screenshot.js '.fnhtml.' '.fnpng
     execute cmd
     echo 'Screenshot '.fn.'is uploaded.'

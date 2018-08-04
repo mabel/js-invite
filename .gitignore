@@ -1,6 +1,1 @@
-etc/js-invite_ru.*
-etc/credentials.js
-log
-server/debug.sh
-public
-tmp
+*.html
