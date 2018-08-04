@@ -1,6 +1,4 @@
 etc/js-invite_ru.*
 etc/credentials.js
-log
-server/debug.sh
-public
+etc/.htpasswd
 tmp

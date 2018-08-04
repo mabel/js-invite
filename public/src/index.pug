@@ -1,0 +1,16 @@
+doctype html
+html(lang='ru')
+    head
+        include pug_modules/meta.pug
+        include pug_modules/icons.pug
+        include pug_modules/mdl.pug
+        include pug_modules/require.pug
+        link(rel="stylesheet" href="css/index.css")
+    body
+        main
+            form(action="#")
+                div(class="mdl-textfield mdl-js-textfield" style="width: 400px")
+                    input(class="mdl-textfield__input" type="text" pattern="^[a-zA-Z0-9_\-]{7,14}$" id="invite")
+                    label(class="mdl-textfield__label" for="invite")
+                        span Если у вас есть приглашение - введите его сюда.
+                        span(class="mdl-textfield__error") Формат приглашения - от 7 до 14 знаков (лат. буквы, цифры, "_" и "-").
