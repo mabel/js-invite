@@ -32,8 +32,9 @@
           return;
         }
         obj = JSON.parse(msg.data);
-        if (!!obj.vim_screen) {
-          return main.innerHTML = obj.vim_screen;
+        if (obj.vim_screen) {
+          main.innerHTML = obj.vim_screen;
+          return document.body.style.backgroundColor = 'black';
         }
       };
     };

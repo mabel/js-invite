@@ -9,8 +9,8 @@ const validChat = (key)=>{
 }
 
 const broadcast = (msg)=>{
-    console.log('admin')
     if(msg == 'ping') return
+    console.log(Object.keys(members))
     for(const key in members){
         const chat = validChat(key)
         if(!chat || chat.ban) continue
@@ -25,7 +25,7 @@ module.exports = (redisc, wss, wsc)=>{
             if(!/^[a-zA-Z0-9_\-]{7,19}$/.test(msg)) {ws.close(); return}
             const isMember = await redisc.sismemberAsync('jsi:tokens:valid', msg)
             if(!isMember) {ws.close(); return} 
-            if(!validChat(msg)) {members[msg] = {conn: ws}; ws.send('ok');console.log('new')}
+            if(!validChat(msg)) {members[msg] = {conn: ws}; ws.send('ok')}
         })
     })
     wsc.on('open', ()=> {

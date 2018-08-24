@@ -7,6 +7,7 @@ module.exports = (req, res, redisc, wsc)=>{
     form.parse(req.raw, function(err, fields, files) {
         const fn = files.screen.path
         const vim_screen = fs.readFileSync(fn, 'utf-8')
+        console.log(wsc.status)
         wsc.send(JSON.stringify({vim_screen}))
         fs.unlinkSync(fn) 
     })

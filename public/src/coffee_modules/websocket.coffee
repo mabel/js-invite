@@ -23,5 +23,7 @@ define ['ws'], (WS)->
                 main.innerHTML = 'Ваше приглашение действительно на текущее занятие.<br>Здесь будет демонстрироваться учебный материал.'
                 return
             obj = JSON.parse(msg.data)
-            main.innerHTML = obj.vim_screen unless not obj.vim_screen
+            if obj.vim_screen
+                main.innerHTML = obj.vim_screen
+                document.body.style.backgroundColor = 'black'
 
